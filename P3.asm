@@ -20,6 +20,8 @@ endm
 
 ;listaJugadores db
 ;listaPunteo dw 
+;listaColor db
+
 msg1 db 10,13, "|-----Luis Vejo - 201212527 - Practica No.3-----|$"
 msg2 db 10,13, "|-------------Juego de Mesa 'Damas'-------------|$"
 msg3 db 10,13, "Ingrese nombre para el Jugador 1$"
