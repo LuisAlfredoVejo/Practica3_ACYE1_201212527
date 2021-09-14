@@ -26,7 +26,8 @@ msg1 db 10,13, "|-----Luis Vejo - 201212527 - Practica No.3-----|$"
 msg2 db 10,13, "|-------------Juego de Mesa 'Damas'-------------|$"
 msg3 db 10,13, "Ingrese nombre para el Jugador 1: $"
 msg4 db 10,13, "Ingrese nombre para el jugador 2: $"
-nombre db 100 dup(' ') , '$'
+j1 db 100 dup(' ') , '$'
+j2 db 100 dup(' ') , '$'
 
 .code
     main proc 
@@ -44,10 +45,25 @@ nombre db 100 dup(' ') , '$'
         mov ah, 3fh
         mov bx, 00
         mov cx, 100
-        mov dx, offset[nombre]
+        mov dx, offset[j1]
         int 21h
 
-        imprimir nombre
+        mov ax, seg @data
+        mov ds, ax
+
+        mov ah, 09h
+        lea dx, msg4
+        int 21h
+
+        mov ah, 3fh
+        mov bx, 00
+        mov cx, 100
+        mov dx, offset[j2]
+        int 21h
+
+        imprimir j1
+        
+        imprimir j2
 
         close
 
