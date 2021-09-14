@@ -47,6 +47,8 @@ nombre db 100 dup(' ') , '$'
         mov dx, offset[nombre]
         int 21h
 
+        imprimir nombre
+
         close
 
     main endp
