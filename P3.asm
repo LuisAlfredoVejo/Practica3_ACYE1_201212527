@@ -28,10 +28,10 @@ msg3 db 10,13, "Ingrese nombre para el Jugador 1$"
 msg4 db 10,13, "Ingrese nombre para el jugador 2$"
 
 .code
-begin proc far
+    main proc 
 
 imprimir msg1
 imprimir msg2
 
-begin endp
+    main endp
 end
