@@ -12,3 +12,17 @@ close macro
     xor al, al
     int 21h
 endm
+
+;-----------------------------------Programa---------------------------------------------
+.model small
+.stack 64 
+.data
+
+listaJugadores db
+listaPunteo dw 
+
+.code
+begin proc far
+
+begin endp
+end
